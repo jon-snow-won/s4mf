@@ -1,0 +1,1 @@
+- kube: директория содержит модифицированные файлы с типами из пакета @kubernetes/client-node, которые требуются для swagger. Конвертация запускается скриптом `npm run convert:types` и описана в файле [type-convertor.utils.ts](src/common/helpers/type-convertor.utils.ts)

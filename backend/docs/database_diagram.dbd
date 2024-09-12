@@ -1,0 +1,83 @@
+//Modify this code to update the diagram
+
+setting_type
+-
+id int PK
+name string
+// json_schema
+pattern jsonb
+
+setting
+-
+id int PK
+idx guid
+revision int
+setting_type int FK > setting_type.id
+extends int[]
+properties jsonb
+
+service
+-
+id int PK
+idx guid
+name string
+description string
+// version int[]
+revision int
+service_type int FK > service_type.id
+
+
+service_descendants
+-
+id int PK
+service_parent_id int FK > service.id
+service_child_id int FK > service.id
+
+service_roles
+-
+service_id int FK > service.id
+role_id int FK > roles.id
+
+service_type
+-
+id int PK
+name string
+
+structure
+-
+id int PK
+idx guid
+name string
+description string
+// version int[]
+revision int
+
+service_settings
+-
+service_id int FK > service.id
+setting_id int FK > setting.id
+
+structure_service
+-
+id int PK
+structure_id int FK > structure.id
+// structure_revision
+service_id int FK > service.id
+// order int
+
+structure_settings
+-
+structure_id int FK > structure.id
+setting_id int FK > setting.id
+
+roles
+-
+id int PK
+name string
+
+//pattern_properties
+//-
+//id int PK
+//setting_type int FK > settings_type.id
+//json_properties jsonb
+POSITION({"settings_type":{"x":1366,"y":631,"w":230},"setting":{"x":982,"y":235,"w":230},"application":{"x":548,"y":650,"w":230},"application_type":{"x":810,"y":969,"w":230},"manifest":{"x":4,"y":658,"w":230},"applications_settings":{"x":722,"y":395,"w":270},"manifests_application":{"x":10,"y":433,"w":270},"stru":{"x":237,"y":293,"w":230},"struc":{"x":179,"y":304,"w":230},"structure":{"x":393,"y":66,"w":230},"structure_application":{"x":173,"y":570,"w":270},"ser":{"x":472,"y":82,"w":230},"sert":{"x":592,"y":249,"w":230},"service":{"x":395,"y":356,"w":230},"service_type":{"x":681,"y":611,"w":230},"service_settings":{"x":682,"y":284,"w":230},"structure_service":{"x":74,"y":178,"w":238},"pattern_properties":{"x":1118,"y":864,"w":246},"roles":{"x":395,"y":613,"w":230},"serivce_roles":{"x":331,"y":620,"w":230},"serbivce_roles":{"x":195,"y":395,"w":230},"servivce_roles":{"x":220,"y":267,"w":230},"service_roles":{"x":114,"y":411,"w":230},"structure_settings":{"x":666,"y":161,"w":246},"service_descendants":{"x":682,"y":426,"w":254},"setting_type":{"x":1250,"y":513,"w":230},"S":{"x":610,"y":50,"w":230},"SER":{"x":610,"y":50,"w":230},"SERVICE":{"x":610,"y":50,"w":230},"s":{"x":610,"y":50,"w":230},"service s":{"x":610,"y":50,"w":230}})
