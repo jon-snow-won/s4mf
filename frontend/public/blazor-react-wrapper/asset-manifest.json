@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.js": "/static/js/main.e7d10bd6.js",
+    "blazorReactWrapper.js": "/blazor-react-wrapper.js",
+    "static/js/src_bootstrap_js.edc764ed.chunk.js": "/static/js/src_bootstrap_js.edc764ed.chunk.js",
+    "static/js/node_modules_react_index_js.ff50276a.chunk.js": "/static/js/node_modules_react_index_js.ff50276a.chunk.js",
+    "static/js/src_App_js.aac1f40e.chunk.js": "/static/js/src_App_js.aac1f40e.chunk.js",
+    "static/js/vendors-node_modules_react-dom_index_js.9b675372.chunk.js": "/static/js/vendors-node_modules_react-dom_index_js.9b675372.chunk.js",
+    "index.html": "/index.html",
+    "main.e7d10bd6.js.map": "/static/js/main.e7d10bd6.js.map",
+    "blazor-react-wrapper.js.map": "/blazor-react-wrapper.js.map",
+    "src_bootstrap_js.edc764ed.chunk.js.map": "/static/js/src_bootstrap_js.edc764ed.chunk.js.map",
+    "node_modules_react_index_js.ff50276a.chunk.js.map": "/static/js/node_modules_react_index_js.ff50276a.chunk.js.map",
+    "src_App_js.aac1f40e.chunk.js.map": "/static/js/src_App_js.aac1f40e.chunk.js.map",
+    "vendors-node_modules_react-dom_index_js.9b675372.chunk.js.map": "/static/js/vendors-node_modules_react-dom_index_js.9b675372.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.e7d10bd6.js"
+  ]
+}

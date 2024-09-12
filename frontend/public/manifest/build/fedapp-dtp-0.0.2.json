@@ -1,0 +1,196 @@
+{
+    "name": "fedapp-dtp",
+    "version": "0.0.2",
+    "settings": {
+        "structure": [
+            "api:api-fedapp-dtp@0.0.1",
+            "auth:auth-fedapp-dtp@0.0.1",
+            "layout:layout-fedapp-dtp@0.0.1",
+            "routing:routing-fedapp-dtp@0.0.1",
+            "view:view-fedapp-dtp@0.0.1"
+        ],
+        "api": {
+            "name": "api-fedapp-dtp",
+            "version": "0.0.1",
+            "type": "api",
+            "extends": [],
+            "global": {
+                "prefixes": {},
+                "urls": {
+                    "FED_APP_URL": "http://dtp.rtk-element.ru/test/el-aggregate-front/",
+                    "DICTIONARY_API": "http://dtp.rtk-element.ru/test/dictionary-service/"
+                }
+            },
+            "local": {
+                "prefixes": {},
+                "urls": {
+                    "NOTIFICATIONS_WEBSOCKET_URL": "ws://dtp.rtk-element.ru/test/notifications-service/"
+                }
+            }
+        },
+        "auth": {
+            "name": "auth-fedapp-dtp",
+            "version": "0.0.1",
+            "type": "auth",
+            "extends": [],
+            "global": {
+                "AUTH": "front"
+            },
+            "local": {
+                "KEYCLOAK_URL": "http://dtp.rtk-element.ru/keycloakx/",
+                "KEYCLOAK_REALM": "dtp",
+                "KEYCLOAK_CLIENT_ID": "manifest-constructor"
+            }
+        },
+        "layout": {
+            "name": "layout-full",
+            "version": "0.0.1",
+            "type": "layout",
+            "extends": [],
+            "global": {},
+            "local": {
+                "params": {
+                    "area": "GRID_1"
+                }
+            }
+        },
+        "routing": {
+            "name": "routing-fedapp-dtp",
+            "version": "0.0.1",
+            "type": "routing",
+            "extends": [],
+            "global": {},
+            "local": {
+                "parent_prefix": "",
+                "path": "/*",
+                "url": "/"
+            }
+        },
+        "view": {
+            "name": "view-fedapp-dtp",
+            "version": "0.0.1",
+            "type": "view",
+            "extends": [],
+            "global": {},
+            "local": {
+                "systems": [
+                    {
+                        "name": "dtp",
+                        "title": "ЦДП",
+                        "description": "Цифровой Двойник Процессов"
+                    },
+                    {
+                        "name": "dmp",
+                        "title": "ЦМП",
+                        "description": "Цифровой медицинский профиль пациента"
+                    }
+                ]
+            }
+        }
+    },
+    "applications": {
+        "structure": [
+            "dtp:dictionary@0.0.1",
+            "dtp:constructor@0.0.48",
+            "dtp:angle@0.3.59"
+        ],
+        "angle": {
+            "name": "angle",
+            "version": "0.3.60",
+            "settings": {
+                "structure": [
+                    "api:api-angle@0.0.1",
+                    "entrypoint:entrypoint-angle@0.0.1",
+                    "layout:layout-angle@0.0.1",
+                    "routing:routing-angle@0.0.1",
+                    "view:view-angle@0.0.1"
+                ],
+                "api": {
+                    "name": "api-angle",
+                    "version": "0.0.1",
+                    "type": "api",
+                    "extends": [],
+                    "global": {},
+                    "local": {
+                        "prefixes": {
+                            "API_PREFIX": "api/angle-service"
+                        },
+                        "urls": {},
+                        "constants": {
+                            "ANGLES_CODE_BY_TABLE_NAME": "wink_directory_code",
+                            "ANGLES_DICTIONARY_CODE": "winkdirectory",
+                            "ATTRIBUTES_CODE_BY_TABLE_NAME": "att_directory_code",
+                            "ATTRIBUTES_DICTIONARY_CODE": "attdirectory",
+                            "LINK_SCOPE_CODE": "winkcomposition"
+                        }
+                    }
+                },
+                "entrypoint": {
+                    "name": "entrypoint-angle",
+                    "version": "0.0.1",
+                    "type": "entrypoint",
+                    "extends": [],
+                    "global": {},
+                    "local": {
+                        "type": "microfront",
+                        "url": "http://svc-internal.element-lab.ru/test/el-angle-front/el-angle-front.js",
+                        "scope": "angle",
+                        "module": "./Angle",
+                        "props": {
+                            "url": "/angle",
+                            "name": "Ракурсы"
+                        }
+                    }
+                },
+                "layout": {
+                    "name": "layout-full",
+                    "version": "0.0.1",
+                    "type": "layout",
+                    "extends": [],
+                    "global": {},
+                    "local": {
+                        "params": {
+                            "area": "GRID_1"
+                        }
+                    }
+                },
+                "routing": {
+                    "name": "routing-angle-dtp",
+                    "version": "0.0.1",
+                    "type": "routing",
+                    "extends": [],
+                    "global": {},
+                    "local": {
+                        "parent_prefix": "angle",
+                        "path": "/angle/*",
+                        "url": "/angle",
+                        "name": "Дизайнер ракурсов"
+                    }
+                }
+            },
+            "applications": {
+                "structure": []
+            }
+        },
+        "constructor": {
+            "name": "constructor",
+            "version": "0.0.48",
+            "settings": {
+                "structure": []
+            },
+            "applications": {
+                "structure": []
+            }
+        },
+        "dictionary": {
+            "name": "dictionary",
+            "version": "0.0.1",
+            "settings": {
+                "structure": []
+            },
+            "applications": {
+                "structure": []
+            }
+        }
+    }
+}

@@ -1,0 +1,32 @@
+@font-face {
+    font-family: 'Roboto';
+    src: local('Roboto'),
+    url("~assets/fonts/Roboto/Roboto-Regular.ttf") format('truetype'),
+    url("~assets/fonts/Roboto/Roboto-Light.ttf") format('truetype'),
+    url("~assets/fonts/Roboto/Roboto-Medium.ttf") format('truetype');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Material Icons';
+    src: local('Material Icons'),
+    url("~assets/fonts/MaterialIcons/MaterialIcons-Regular.ttf") format('truetype')
+}
+
+#root {
+    font-family: Roboto, Helvetica, Arial, sans-serif !important;
+    height: 100vh;
+    background-color: #f1f4f6;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 78px;
+    height: 100%;
+
+    background-color: #e74d43;
+}

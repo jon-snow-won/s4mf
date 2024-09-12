@@ -1,0 +1,54 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "noImplicitAny": true,
+    "module": "ESNext",
+    "target": "es5",
+    "jsx": "react-jsx",
+    "allowJs": true,
+    "moduleResolution": "node",
+    //    "allowTsInNodeModules": true, // for PVK widget, but error if enabled: TS5023: Unknown compiler option 'allowTsInNodeModules'
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "baseUrl": ".",
+    "paths": {
+      "@src/*": [
+        "./src/*"
+      ],
+      "@assets/*": [
+        "./src/assets/*"
+      ],
+      "@config/*": [
+        "./src/config/*"
+      ],
+      "@components/*": [
+        "./src/components/*"
+      ],
+      "@hooks/*": [
+        "./src/hooks/*"
+      ],
+      "@layouts/*": [
+        "./src/layouts/*"
+      ],
+      "@pages/*": [
+        "./src/pages/*"
+      ],
+      "@providers/*": [
+        "./src/providers/*"
+      ],
+      "@services/*": [
+        "./src/services/*"
+      ],
+      "@utils/*": [
+        "./src/utils/*"
+      ],
+    }
+  },
+  "include": [
+    "src",
+  ],
+  "exclude": [
+    "node_modules"
+  ],
+}

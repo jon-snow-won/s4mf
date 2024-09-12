@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Digital Twin Processes | Aggregated Front</title>
+</head>
+<body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+
+
+
+    <!--
+        ПОДКЛЮЧЕНИЕ ЧЕРЕЗ stompJS, минуя SockJS
+    -->
+    <script type="importmap">{"imports": { "@stomp/stompjs": "https://ga.jspm.io/npm:@stomp/stompjs@6.1.2/esm6/index.js" }}</script>
+    <script src="https://ga.jspm.io/npm:es-module-shims@1.5.1/dist/es-module-shims.js" integrity="sha384-ZGtUNdKMtA2sSrO9dN9d2TOeiSlXlDSrOrasgO9YoKR4LsDV7RLdUvvX1M0gCkl2" crossorigin="anonymous"></script>
+    <script type="module">
+        import * as Stompjs from "@stomp/stompjs";
+        const Client = Stompjs.Client
+
+        const brokerURL = 'ws://192.168.100.72:8080/ws'
+
+        const realm = 'federal-app'
+        const login = 'dictionary-admin'
+        const source = 'dictionaryservice,testservice' // все модули - пустая строка
+        const subscribeDestination = '/notifications/' + realm + '/' + login + '/' + source + '/unread-count'
+
+        const client = new Client({
+            brokerURL,
+            onConnect: () => {
+                console.log('deb-ws-onConnect: Successfully connected to WS')
+                client.subscribe(subscribeDestination, message => // когда получаем апдейты
+                    console.log(`Received: ${message.body}`)
+                );
+            },
+            onDisconnect: (message) => { // при дисконнекте
+                console.log('deb-ws-onDisconnect', message)
+            },
+            onStompError: (message) => {  // при ошибке
+                console.log('deb-ws-onStompError', message)
+            },
+            debug: (str) => {  // для дебага
+                console.log(`deb-ws-dbg-${new Date().toISOString()}`, str)
+            },
+        });
+        client.activate();
+    </script>
+
+
+
+</body>
+</html>

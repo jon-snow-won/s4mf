@@ -1,0 +1,709 @@
+{
+    "version": "0",
+    "name": "mega-admin",
+    "description": "mega-admin interface manifest",
+    "services": {
+        "auth": {
+            "user": {
+                "url": "https://client-iam2.prod2.pd20.foms.gtp/api-gateway/api/user"
+            }
+        }
+    },
+    "apps": {
+        "erzl": {
+            "name": "ЕРЗЛ",
+            "routes": []
+        },
+        "pump": {
+            "name": "ПУМП",
+            "routes": []
+        },
+        "siszl": {
+            "name": "СИСЗЛ",
+            "routes": [
+                "crmfront",
+                "lkadmin",
+                "contentcms"
+            ],
+            "isGroup": true
+        },
+        "kmp": {
+            "name": "УС ОМС",
+            "routes": [
+                "kmp"
+            ],
+            "isGroup": true
+        },
+        "dmp": {
+            "name": "ЦМП",
+            "routes": [
+                "main",
+                "dictionary",
+                "constructor",
+                "workflow-designer",
+                "manifest",
+                "glossary",
+                "risk-calculator",
+                "el-dmn-front",
+                "angle",
+                "streaming",
+                "lab4oms",
+                "swagger",
+                "tasks"
+            ],
+            "isGroup": true
+        }
+    },
+    "widgets": {
+        "settings": {
+            "name": "Настройки",
+            "routes": [
+                "users-management",
+                "el-api-gateway-front"
+            ],
+            "icon": "SettingsOutlinedIcon"
+        },
+        "notifications": {
+            "name": "Уведомления",
+            "routes": [
+                "notifications"
+            ],
+            "icon": null
+        },
+        "profile": {
+            "name": "Профиль",
+            "routes": [
+                "el-user-profile-dmp-front"
+            ],
+            "icon": null
+        },
+        "faq": {
+            "name": "FAQ",
+            "routes": [],
+            "icon": null
+        }
+    },
+    "routes": {
+        "": {
+            "path": "/",
+            "name": "ЕРЗЛ",
+            "layout": "FULL",
+            "content": [
+                "erzl"
+            ]
+        },
+        "main": {
+            "path": "/main/*",
+            "name": "Рабочий стол",
+            "layout": "FULL",
+            "content": [
+                "main"
+            ],
+            "icon": "DashboardOutlinedIcon"
+        },
+        "dictionary": {
+            "path": "/dictionary/*",
+            "name": "Юниграф",
+            "layout": "FULL",
+            "content": [
+                "dictionary"
+            ],
+            "icon": "DictionaryIcon"
+        },
+        "constructor": {
+            "path": "/constructor/*",
+            "name": "Дизайнер моделей",
+            "layout": "FULL",
+            "content": [
+                "constructor"
+            ],
+            "icon": "ConstructorIcon"
+        },
+        "workflow-designer": {
+            "path": "/workflow-designer/*",
+            "name": "Дизайнер процессов",
+            "layout": "FULL",
+            "content": [
+                "workflow-designer"
+            ],
+            "icon": "WorkflowDesignerIcon"
+        },
+        "manifest": {
+            "path": "/manifest/*",
+            "name": "Дизайнер интерфейсов",
+            "layout": "FULL",
+            "content": [
+                "manifest"
+            ],
+            "icon": "ManifestConstructorIcon"
+        },
+        "glossary": {
+            "path": "/glossary/*",
+            "name": "База знаний",
+            "layout": "FULL",
+            "content": [
+                "glossary"
+            ],
+            "icon": "GlossaryIcon"
+        },
+        "risk-calculator": {
+            "path": "/risk-calculator/*",
+            "name": "Дизайнер правил",
+            "layout": "FULL",
+            "content": [
+                "risk-calculator"
+            ],
+            "icon": "RiskCalculatorIcon"
+        },
+        "el-dmn-front": {
+            "path": "/el-dmn-front/*",
+            "name": "Дизайнер правил(new)",
+            "layout": "FULL",
+            "content": [
+                "el-dmn-front"
+            ],
+            "icon": "RiskCalculatorIcon"
+        },
+        "angle": {
+            "path": "/angle/*",
+            "name": "Дизайнер ракурсов",
+            "layout": "FULL",
+            "content": [
+                "angle"
+            ],
+            "icon": "ArmRakursIcon"
+        },
+        "streaming": {
+            "path": "/streaming/*",
+            "name": "Потоковая обработка данных",
+            "layout": "FULL",
+            "content": [
+                "streaming"
+            ],
+            "icon": "StreamingIcon"
+        },
+        "crmfront": {
+            "path": "/crmfront/*",
+            "name": "СИСЗЛ ГИС ОМС",
+            "layout": "FULL",
+            "content": [
+                "crm-front"
+            ]
+        },
+        "lkadmin": {
+            "path": "/lkadmin/*",
+            "name": "ЛК АДМИН",
+            "layout": "FULL",
+            "content": [
+                "lk-admin"
+            ]
+        },
+        "contentcms": {
+            "path": "/contentcms/*",
+            "name": "КОНТЕНТ CMS",
+            "layout": "FULL",
+            "content": [
+                "content-cms"
+            ]
+        },
+        "kmp": {
+            "path": "/kmp/*",
+            "name": "КМП",
+            "layout": "FULL",
+            "content": [
+                "kmp"
+            ]
+        },
+        "lab4oms": {
+            "path": "/lab4oms/*",
+            "name": "Загрузка документов",
+            "layout": "FULL",
+            "content": [
+                "lab4oms"
+            ],
+            "icon": "Lab4omsIcon"
+        },
+        "swagger": {
+            "path": "/swagger/*",
+            "name": "Витрина сервисов",
+            "layout": "FULL",
+            "content": [
+                "swagger"
+            ],
+            "icon": "ExtensionOutlinedIcon"
+        },
+        "users-management": {
+            "path": "/users-management/*",
+            "name": "Группы и пользователи",
+            "layout": "FULL",
+            "content": [
+                "users-management"
+            ],
+            "icon": null
+        },
+        "el-notifications-service-front": {
+            "path": "/notifications/*",
+            "name": "Уведомления",
+            "layout": "FULL",
+            "content": [
+                "el-notifications-service-front"
+            ],
+            "icon": null
+        },
+        "el-user-profile-dmp-front": {
+            "path": "/el-user-profile-dmp-front/*",
+            "name": "Личный кабинет",
+            "layout": "FULL",
+            "content": [
+                "el-user-profile-dmp-front"
+            ],
+            "icon": null
+        },
+        "el-api-gateway-front": {
+            "path": "/el-api-gateway-front/*",
+            "name": "API шлюз",
+            "layout": "FULL",
+            "content": [
+                "el-api-gateway-front"
+            ],
+            "icon": null
+        },
+        "tasks": {
+            "path": "/tasks/*",
+            "name": "Задания",
+            "layout": "FULL",
+            "content": [
+                "tasks"
+            ],
+            "icon": "TaskAltIcon"
+        }
+    },
+    "content": {
+        "erzl": {
+            "components": [
+                {
+                    "name": "erzl",
+                    "areaId": "GRID_1"
+                }
+            ]
+        },
+        "main": {
+            "components": [
+                {
+                    "name": "mainPage",
+                    "areaId": "GRID_1"
+                }
+            ]
+        },
+        "dictionary": {
+            "components": [
+                {
+                    "name": "dictionary",
+                    "areaId": "GRID_1"
+                }
+            ]
+        },
+        "constructor": {
+            "components": [
+                {
+                    "name": "constructor",
+                    "areaId": "GRID_1"
+                }
+            ]
+        },
+        "workflow-designer": {
+            "components": [
+                {
+                    "name": "workflowDesigner",
+                    "areaId": "GRID_1"
+                }
+            ]
+        },
+        "manifest": {
+            "components": [
+                {
+                    "name": "manifestConstructor",
+                    "areaId": "GRID_1"
+                }
+            ]
+        },
+        "glossary": {
+            "components": [
+                {
+                    "name": "glossary",
+                    "areaId": "GRID_1"
+                }
+            ]
+        },
+        "risk-calculator": {
+            "components": [
+                {
+                    "name": "riskCalculator",
+                    "areaId": "GRID_1"
+                }
+            ]
+        },
+        "el-dmn-front": {
+            "components": [
+                {
+                    "name": "dmnFront",
+                    "areaId": "GRID_1"
+                }
+            ]
+        },
+        "angle": {
+            "components": [
+                {
+                    "name": "angle",
+                    "areaId": "GRID_1"
+                }
+            ]
+        },
+        "streaming": {
+            "components": [
+                {
+                    "name": "streaming",
+                    "areaId": "GRID_1"
+                }
+            ]
+        },
+        "crm-front": {
+            "components": [
+                {
+                    "name": "crm-front",
+                    "areaId": "GRID_1"
+                }
+            ]
+        },
+        "lk-admin": {
+            "components": [
+                {
+                    "name": "lk-admin",
+                    "areaId": "GRID_1"
+                }
+            ]
+        },
+        "content-cms": {
+            "components": [
+                {
+                    "name": "content-cms",
+                    "areaId": "GRID_1"
+                }
+            ]
+        },
+        "kmp": {
+            "components": [
+                {
+                    "name": "kmp",
+                    "areaId": "GRID_1"
+                }
+            ]
+        },
+        "lab4oms": {
+            "components": [
+                {
+                    "name": "lab4oms",
+                    "areaId": "GRID_1"
+                }
+            ]
+        },
+        "swagger": {
+            "components": [
+                {
+                    "name": "swagger",
+                    "areaId": "GRID_1"
+                }
+            ]
+        },
+        "users-management": {
+            "components": [
+                {
+                    "name": "usersManagement",
+                    "areaId": "GRID_1"
+                }
+            ]
+        },
+        "el-notifications-service-front": {
+            "components": [
+                {
+                    "name": "elNotificationsServiceFront",
+                    "areaId": "GRID_1"
+                }
+            ]
+        },
+        "el-user-profile-dmp-front": {
+            "components": [
+                {
+                    "name": "elUserProfileDmpFront",
+                    "areaId": "GRID_1"
+                }
+            ]
+        },
+        "el-api-gateway-front": {
+            "components": [
+                {
+                    "name": "elApiGatewayFront",
+                    "areaId": "GRID_1"
+                }
+            ]
+        },
+        "tasks": {
+            "components": [
+                {
+                    "name": "tasks",
+                    "areaId": "GRID_1"
+                }
+            ]
+        }
+    },
+    "components": {
+        "erzl": {
+            "url": "/",
+            "scope": "erzl",
+            "module": "./App",
+            "props": {
+                "url": "/erzl",
+                "name": "Карточка здоровья"
+            }
+        },
+        "mainPage": {
+            "url": "/main",
+            "mode": "superset",
+            "tabs": [
+                {
+                    "path": "",
+                    "title": "Рабочий стол",
+                    "supersetParams": {
+                        "domain": "http://dmp-dev-superset.rtk-element.ru",
+                        "dashboardId": "743e4d8c-8425-4917-b263-e889995a65ec",
+                        "accessUsername": "superset_fp",
+                        "accessPassword": "]OOC\\]UWuK\\RpSNT9*x-BSnqI#R^n#",
+                        "guestUsername": "admin",
+                        "guestFirstname": "Superset",
+                        "guestLastname": "Admin"
+                    }
+                }
+            ]
+        },
+        "dictionary": {
+            "url": "http://192.168.100.72/dictionary.js",
+            "scope": "dictionary",
+            "module": "./Dictionary",
+            "props": {
+                "url": "/dictionary",
+                "name": "Карточка здоровья2"
+            }
+        },
+        "constructor": {
+            "url": "http://svc-internal.element-lab.ru/test/fe-constructor/constructor.js",
+            "envUrl": "http://svc-internal.element-lab.ru/test/fe-constructor/env.js",
+            "scope": "constructor",
+            "module": "./Constructor",
+            "props": {
+                "url": "/constructor",
+                "name": "Карточка здоровья2"
+            }
+        },
+        "workflowDesigner": {
+            "url": "http://svc-internal.element-lab.ru/test/el-wf-designer-web/workflow-designer.js",
+            "envUrl": "http://svc-internal.element-lab.ru/test/el-wf-designer-web/env.js",
+            "scope": "workflowDesigner",
+            "module": "./WorkflowDesigner",
+            "props": {
+                "url": "/workflow-designer",
+                "name": "Дизайнер процессов"
+            }
+        },
+        "manifestConstructor": {
+            "url": "http://svc-internal.element-lab.ru/test/manifest-constructor/manifest-constructor.js",
+            "envUrl": "http://svc-internal.element-lab.ru/test/manifest-constructor/env.js",
+            "scope": "manifestConstructor",
+            "module": "./ManifestConstructor",
+            "props": {
+                "url": "/manifest",
+                "name": "Глоссарий"
+            }
+        },
+        "glossary": {
+            "url": "http://svc-internal.element-lab.ru/test/fe-glossary/glossary.js",
+            "envUrl": "http://svc-internal.element-lab.ru/test/fe-glossary/env.js",
+            "scope": "glossary",
+            "module": "./Glossary",
+            "props": {
+                "url": "/glossary",
+                "name": "База знаний"
+            }
+        },
+        "riskCalculator": {
+            "url": "http://localhost:3001/el-dmn-front.js",
+            "scope": "dmn",
+            "module": "./dmn",
+            "props": {
+                "url": "/risk-calculator",
+                "name": "Дизайнер правил"
+            }
+        },
+        "dmnFront": {
+            "url": "http://dtp.rtk-element.ru/test/el-dmn-front/el-dmn-front.js",
+            "envUrl": "http://dtp.rtk-element.ru/test/el-dmn-front/env.js",
+            "scope": "dmnFront",
+            "module": "./DmnFront",
+            "props": {
+                "path": "/el-dmn-front",
+                "name": "Дизайнер правил(new)"
+            }
+        },
+        "angle": {
+            "url": "http://svc-internal.element-lab.ru/test/el-angle-front/el-angle-front.js",
+            "envUrl": "http://svc-internal.element-lab.ru/test/el-angle-front/env.js",
+            "scope": "angle",
+            "module": "./Angle",
+            "props": {
+                "url": "/angle",
+                "name": "Ракурсы"
+            }
+        },
+        "streaming": {
+            "url": "http://svc-internal.element-lab.ru/test/ui-emd-streaming/streaming.js",
+            "scope": "streaming",
+            "module": "./Streaming",
+            "props": {
+                "url": "/streaming",
+                "name": "Карточка здоровья"
+            }
+        },
+        "crm-front": {
+            "url": "https://crm-front.svp.mmdx.ru/federation/crm-front.js",
+            "scope": "crmfront",
+            "module": "./CrmFront",
+            "props": {
+                "url": "/crmfront",
+                "name": "Crm-Front"
+            }
+        },
+        "lk-admin": {
+            "url": "https://lk-admin.svp.mmdx.ru/federation/lk-admin.js",
+            "scope": "lkadmin",
+            "module": "./LkAdmin",
+            "props": {
+                "url": "/lkadmin",
+                "name": "Lk-Admin"
+            }
+        },
+        "content-cms": {
+            "url": "https://content-cms.svp.mmdx.ru/federation/content-cms.js",
+            "scope": "contentcms",
+            "module": "./ContentCms",
+            "props": {
+                "url": "/contentcms",
+                "name": "Content-Cms"
+            }
+        },
+        "kmp": {
+            "url": "http://192.168.100.34/msfront/kmp.js",
+            "scope": "kmp",
+            "module": "./Kmp",
+            "props": {
+                "url": "/kmp",
+                "name": "КМП"
+            }
+        },
+        "lab4oms": {
+            "url": "http://svc-internal.element-lab.ru/portal-oms/lab4oms.js",
+            "scope": "lab4oms",
+            "module": "./Lab4oms",
+            "props": {
+                "url": "/lab4oms",
+                "name": "Загрузка документов"
+            }
+        },
+        "swagger": {
+            "mode": "iFrame",
+            "url": "/swagger",
+            "tabs": [
+                {
+                    "path": "/swagger_1",
+                    "title": "Swagger 1",
+                    "source": "http://svc-internal.element-lab.ru/test/universal-api/swagger-ui/swagger-ui/index.html"
+                }
+            ]
+        },
+        "usersManagement": {
+            "url": "http://192.168.100.72:7001/users-management.js",
+            "scope": "usersManagement",
+            "module": "./UsersManagement",
+            "props": {
+                "url": "/users-management",
+                "name": "Группы и пользователи"
+            }
+        },
+        "elNotificationsServiceFront": {
+            "url": "http://localhost:3001/el-notifications-service-front.js",
+            "scope": "elNotificationsServiceFront",
+            "module": "./ElNotificationsServiceFront",
+            "props": {
+                "url": "/notifications",
+                "name": "Уведомления"
+            }
+        },
+        "elUserProfileDmpFront": {
+            "url": "http://localhost:3001/el-user-profile-dmp-front.js",
+            "scope": "elUserProfileDmpFront",
+            "module": "./ElUserProfileDmpFront",
+            "props": {
+                "url": "/el-user-profile-dmp-front",
+                "name": "ЛК ЦДП"
+            }
+        },
+        "elApiGatewayFront": {
+            "url": "http://localhost:3001/el-api-gateway.js",
+            "scope": "apiGateway",
+            "module": "./ApiGateway",
+            "props": {
+                "url": "/el-api-gateway-front",
+                "name": "API шлюз"
+            }
+        },
+        "tasks": {
+            "url": "http://localhost:3003/tasks-service-frontend.js",
+            "scope": "tasks",
+            "module": "./Tasks",
+            "props": {
+                "url": "/tasks",
+                "name": "Задания"
+            }
+        }
+    },
+    "roles": [
+        {
+            "code": "1",
+            "level": "erzl",
+            "title": "Единый реестр застрахованных лиц",
+            "description": "ЕРЗЛ"
+        },
+        {
+            "code": "2",
+            "level": "pump",
+            "title": "Персональный учет медицинской помощи",
+            "description": "ПУМП"
+        },
+        {
+            "code": "3",
+            "level": "siszl",
+            "title": "Сервисы информационного сопровождения застрахованных лиц",
+            "description": "СИСЗЛ"
+        },
+        {
+            "code": "4",
+            "level": "kmp",
+            "title": "Управленческие сервисы ОМС",
+            "description": "УС ОМС"
+        },
+        {
+            "code": "5",
+            "level": "dmp",
+            "title": "Цифровой медицинский профиль пациента",
+            "description": "ЦМП"
+        }
+    ]
+}
