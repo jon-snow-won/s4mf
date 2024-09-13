@@ -1,5 +1,4 @@
 ## Description
-El Aggregate BFF - Бэкенд для федеративного приложения ([CMDB](https://jira.element-lab.ru/secure/insight/assets/CMDB-12804))
 
 ## Технологический стек
 - [NestJS](https://docs.nestjs.com/)
@@ -7,19 +6,19 @@ El Aggregate BFF - Бэкенд для федеративного приложе
 - [TypeScript](https://www.typescriptlang.org/)
 - [MikroORM](https://mikro-orm.io/)
 
-## Установка
-Для установки используется `npm`:
+## Install
+`npm`:
 ```bash
 $ npm install
 ```
 
-## Запуск приложения
+## Run
 
 ```bash
-# локальный запуск
+# local
 $ npm run start
 
-# локальный запуск с отслеживанием изменением
+# local dev
 $ npm run start:dev
 
 # режим прода
