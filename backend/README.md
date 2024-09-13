@@ -7,7 +7,6 @@
 - [MikroORM](https://mikro-orm.io/)
 
 ## Install
-`npm`:
 ```bash
 $ npm install
 ```
