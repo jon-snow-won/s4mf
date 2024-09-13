@@ -27,7 +27,7 @@ export const useSupersetDashboards = ({
             })
 
             axios
-                .get('http://client-test.svc-internal.element-lab.ru/test/el-aggregate-bff/api/auth/me', {
+                .get('http://client-test.svc-internal.s4mf.com/test/s4mf-bff/api/auth/me', {
                     headers: { Authorization: `Bearer ${token.access_token}` },
                 })
                 .then((res) => {

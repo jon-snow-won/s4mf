@@ -40,7 +40,7 @@ export interface TokenFields {
 //   "exp": 1705934595,
 //   "iat": 1705934295,
 //   "jti": "670a9be4-c6ba-4aef-8c4f-2f0588273c36",
-//   "iss": "https://svp-keycloak.element-lab.ru/realms/federal-app",
+//   "iss": "https://svp-keycloak.s4mf.com/realms/federal-app",
 //   "aud": [
 //   "account",
 //   "dictionary-client-test"

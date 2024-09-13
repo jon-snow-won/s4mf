@@ -8,7 +8,7 @@ module.exports.settingsFedAppDtpApi = {
     global: {
         prefixes: {},
         urls: {
-            FED_APP_URL: "http://dtp.rtk-element.ru/test/el-aggregate-front/",
+            FED_APP_URL: "http://dtp.rtk-element.ru/test/s4mf-front/",
             DICTIONARY_API: "http://dtp.rtk-element.ru/test/dictionary-service/",
         }
     },

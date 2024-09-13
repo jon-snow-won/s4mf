@@ -31,7 +31,7 @@ async function bootstrap() {
     .setDescription('Бэкенд для федеративного приложения')
     .setExternalDoc(
       'CMDB',
-      'https://jira.element-lab.ru/secure/insight/assets/CMDB-12804',
+      'https://jira.s4mf.com/secure/insight/assets/CMDB-12804',
     )
     .addBearerAuth({
       description: 'Token for auth',

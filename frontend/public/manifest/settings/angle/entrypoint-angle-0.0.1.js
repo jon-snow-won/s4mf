@@ -8,7 +8,7 @@ module.exports.settingsAngleEntrypoint = {
     global: {},
     local: {
         type: "microfront", /* microfront | iframe | blazor */
-        url: "http://svc-internal.element-lab.ru/test/el-angle-front/el-angle-front.js",
+        url: "http://svc-internal.s4mf.com/test/el-angle-front/el-angle-front.js",
         scope: "angle",
         module: "./Angle",
         props: {

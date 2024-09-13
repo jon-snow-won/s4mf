@@ -74,13 +74,13 @@ const microFrontendEndpoints = [
     },
     {
         context: ['/api/dictionary-service/mapping-service'],
-        target: 'http' + '://svc-internal.element-lab.ru',
+        target: 'http' + '://svc-internal.s4mf.com',
         changeOrigin: true,
         pathRewrite: { '^/api/dictionary-service/mapping-service/': '/test/metadata-mapper/' },
     },
     {
         context: ['/api/dictionary-service/model-service'],
-        target: 'http' + '://svc-internal.element-lab.ru',
+        target: 'http' + '://svc-internal.s4mf.com',
         changeOrigin: true,
         pathRewrite: { '^/api/dictionary-service/model-service/': '/test/metamodel-designer/' },
     },
@@ -104,25 +104,25 @@ const microFrontendEndpoints = [
     },
     {
         context: ['/api/glossary/term'],
-        target: 'http' + '://svc-internal.element-lab.ru/test/el-api-gateway/api/business-glossary',
+        target: 'http' + '://svc-internal.s4mf.com/test/el-api-gateway/api/business-glossary',
         changeOrigin: true,
         pathRewrite: { '^/api/glossary': '' },
     },
     {
         context: ['/api/glossary/categories'],
-        target: 'http' + '://svc-internal.element-lab.ru/test/el-api-gateway/api/business-glossary',
+        target: 'http' + '://svc-internal.s4mf.com/test/el-api-gateway/api/business-glossary',
         changeOrigin: true,
         pathRewrite: { '^/api/glossary': '' },
     },
     {
         context: ['/api/glossary/domain'],
-        target: 'http' + '://svc-internal.element-lab.ru/test/el-api-gateway/api/metamodel-designer',
+        target: 'http' + '://svc-internal.s4mf.com/test/el-api-gateway/api/metamodel-designer',
         changeOrigin: true,
         pathRewrite: { '^/api/glossary': '' },
     },
     {
         context: ['/api/glossary/domainobject'],
-        target: 'http' + '://svc-internal.element-lab.ru/test/el-api-gateway/api/metamodel-designer',
+        target: 'http' + '://svc-internal.s4mf.com/test/el-api-gateway/api/metamodel-designer',
         changeOrigin: true,
         pathRewrite: { '^/api/glossary': '' },
     },
@@ -134,13 +134,13 @@ const microFrontendEndpoints = [
     },
     {
         context: ['/api/manifest-constructor/mapping'],
-        target: 'http' + '://svc-internal.element-lab.ru',
+        target: 'http' + '://svc-internal.s4mf.com',
         changeOrigin: true,
         pathRewrite: { '^/api/manifest-constructor/mapping': '/test/metadata-mapper/' },
     },
     {
         context: ['/api/manifest-constructor/manifest'],
-        target: 'http' + '://svc-internal.element-lab.ru/test/el-manifest-service',
+        target: 'http' + '://svc-internal.s4mf.com/test/el-manifest-service',
         changeOrigin: true,
         pathRewrite: { '^/api/manifest-constructor/manifest': '' },
     },
@@ -162,19 +162,19 @@ const microFrontendEndpoints = [
             }
             return false
         },
-        target: 'http' + '://svc-internal.element-lab.ru',
+        target: 'http' + '://svc-internal.s4mf.com',
         changeOrigin: true,
         pathRewrite: { '^/risk-calculator-client': '/risk-calculator-server' },
     },
     {
         context: ['/risk-calculator-client/api/risk-calculator'],
-        target: 'http' + '://svc-internal.element-lab.ru',
+        target: 'http' + '://svc-internal.s4mf.com',
         changeOrigin: true,
         pathRewrite: { '^/risk-calculator-client/api/risk-calculator': '/risk-calculator-server/api/risk-calculator' },
     },
     {
         context: ['/risk-calculator-api/api'],
-        target: 'http' + '://svc-internal.element-lab.ru',
+        target: 'http' + '://svc-internal.s4mf.com',
         changeOrigin: true,
         pathRewrite: { ['^/risk-calculator-api/api']: 'risk-calculator-api/api' },
     },
@@ -189,7 +189,7 @@ const microFrontendEndpoints = [
             }
             return false
         },
-        target: 'http' + '://svc-internal.element-lab.ru',
+        target: 'http' + '://svc-internal.s4mf.com',
         changeOrigin: true,
         pathRewrite: { '^/armrakursweb-client': '/test/armrakursweb' },
     },
@@ -207,7 +207,7 @@ const microFrontendEndpoints = [
     },
     {
         context: ['/api/lab4oms'],
-        target: 'http' + '://svc-internal.element-lab.ru',
+        target: 'http' + '://svc-internal.s4mf.com',
         changeOrigin: true,
         pathRewrite: { '^/api/lab4oms': '/cmp/lab4oms-web-client' },
     },
@@ -227,7 +227,7 @@ const microFrontendEndpoints = [
         context: ['/api/comments'],
         target:
             'http' +
-            '://dtp.rtk-element.ru/test/el-aggregate-front/api/process-digital-twin/constructor/api/v2/generation',
+            '://dtp.rtk-element.ru/test/s4mf-front/api/process-digital-twin/constructor/api/v2/generation',
         changeOrigin: true,
         pathRewrite: { '^/api/comments': '' },
     },
@@ -271,7 +271,7 @@ const microFrontendEndpoints = [
     },
     {
         context: ['/api/api-gateway'],
-        target: 'http' + '://client-test.svc-internal.element-lab.ru',
+        target: 'http' + '://client-test.svc-internal.s4mf.com',
         changeOrigin: true,
         pathRewrite: { '^/api/api-gateway': '' },
     },
@@ -283,7 +283,7 @@ const microFrontendEndpoints = [
     },
     {
         context: ['/aggregate-bff/api'],
-        target: 'http' + '://svc-internal.element-lab.ru/test/el-aggregate-bff/api',
+        target: 'http' + '://svc-internal.s4mf.com/test/s4mf-bff/api',
         changeOrigin: true,
         pathRewrite: { '^/aggregate-bff/api': '' },
     },

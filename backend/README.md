@@ -39,7 +39,7 @@ $ npm run start:prod
 |-|-|-|
 | DB_HOST | Хост БД | localhost |
 | DB_PORT | Порт БД | 5432 |
-| DB_NAME | Имя БД | el-aggregate-bff |
+| DB_NAME | Имя БД | s4mf-bff |
 | DB_USER | Пользователь БД | postgres |
 | DB_PASS | Пароль пользователя БД | password |
 |-|-|-|

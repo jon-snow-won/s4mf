@@ -188,7 +188,7 @@ const microFrontendEndpoints = [
         context: ['/api/comments'],
         target:
             'http' +
-            '://dtp.rtk-element.ru/test/el-aggregate-front/api/process-digital-twin/constructor/api/v2/generation',
+            '://dtp.rtk-element.ru/test/s4mf-front/api/process-digital-twin/constructor/api/v2/generation',
         changeOrigin: true,
         pathRewrite: { '^/api/comments': '' },
     },
@@ -271,7 +271,7 @@ const microFrontendEndpoints = [
     },
     {
         context: ['/aggregate-bff/api'],
-        target: 'http' + '://dtp.rtk-element.ru/test/el-aggregate-bff/api',
+        target: 'http' + '://dtp.rtk-element.ru/test/s4mf-bff/api',
         changeOrigin: true,
         pathRewrite: { '^/aggregate-bff/api': '' },
     },

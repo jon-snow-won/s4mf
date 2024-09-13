@@ -476,7 +476,7 @@
         {
           "path": "/risk-calculator-client",
           "title": "Дизайнер правил",
-          "source": "http://svc-internal.element-lab.ru/risk-calculator-server/"
+          "source": "http://svc-internal.s4mf.com/risk-calculator-server/"
         }
       ]
     },
@@ -551,7 +551,7 @@
         {
           "path": "/swagger_1",
           "title": "Swagger 1",
-          "source": "http://svc-internal.element-lab.ru/test/universal-api/swagger-ui/swagger-ui/index.html"
+          "source": "http://svc-internal.s4mf.com/test/universal-api/swagger-ui/swagger-ui/index.html"
         }
       ]
     },

@@ -2,7 +2,7 @@
     "name": "aggregate-front",
     "version": "1.0.363",
     "private": true,
-    "proxy": "https://svp-keycloak.element-lab.ru/",
+    "proxy": "https://svp-keycloak.s4mf.com/",
     "scripts": {
         "start": "webpack serve --mode development --env environment=dmp",
         "build": "webpack --mode production",

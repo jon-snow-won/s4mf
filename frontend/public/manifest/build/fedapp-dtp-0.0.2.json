@@ -17,7 +17,7 @@
             "global": {
                 "prefixes": {},
                 "urls": {
-                    "FED_APP_URL": "http://dtp.rtk-element.ru/test/el-aggregate-front/",
+                    "FED_APP_URL": "http://dtp.rtk-element.ru/test/s4mf-front/",
                     "DICTIONARY_API": "http://dtp.rtk-element.ru/test/dictionary-service/"
                 }
             },
@@ -133,7 +133,7 @@
                     "global": {},
                     "local": {
                         "type": "microfront",
-                        "url": "http://svc-internal.element-lab.ru/test/el-angle-front/el-angle-front.js",
+                        "url": "http://svc-internal.s4mf.com/test/el-angle-front/el-angle-front.js",
                         "scope": "angle",
                         "module": "./Angle",
                         "props": {

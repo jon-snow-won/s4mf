@@ -12,7 +12,7 @@
  * Do not edit the class manually.
  */
 
-export const BASE_PATH = 'http://dtp.rtk-element.ru/test/el-aggregate-bff'.replace(/\/+$/, '')
+export const BASE_PATH = 'http://dtp.rtk-element.ru/test/s4mf-bff'.replace(/\/+$/, '')
 
 export interface ConfigurationParameters {
     basePath?: string // override base path
